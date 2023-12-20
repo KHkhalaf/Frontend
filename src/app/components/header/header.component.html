@@ -1,0 +1,22 @@
+<header class="custom-header">
+  <div>
+    <a href="#" class="title">Backend test</a>
+  </div>
+  <div>
+    <a class="content" (click)="navigate2Users()">Users</a>
+  </div>
+  <div class="header" [hidden]="hideSearchField">
+    <form class="input-form">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Search by ID"
+          name="searchUserId"
+          [(ngModel)]="searchUserId"
+          type="number"
+          (input)="searchUser()"
+        />
+      </mat-form-field>
+    </form>
+  </div>
+</header>

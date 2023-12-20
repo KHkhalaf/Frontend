@@ -1,0 +1,43 @@
+<div class="header">
+  <h1>Users List</h1>
+</div>
+
+<div
+  class="user-list-container"
+  *ngIf="!isLoading"
+  [class.active]="(users | async)?.length > 0"
+>
+  <div class="user-list">
+    <app-user-card
+      *ngFor="let user of users | async"
+      [id]="user.id"
+      [first_name]="user.first_name"
+      [last_name]="user.last_name"
+      [avatar]="user.avatar"
+    >
+    </app-user-card>
+  </div>
+  <div class="pagination">
+    <button
+      mat-button
+      (click)="prevPage()"
+      [disabled]="currentPage === 1 || !currentPage"
+    >
+      Previous
+    </button>
+    <span>Page {{ currentPage || 1 }}</span>
+    <button
+      mat-button
+      (click)="nextPage()"
+      [disabled]="currentPage === this.totalPages"
+    >
+      Next
+    </button>
+  </div>
+</div>
+
+<div *ngIf="isLoading" class="loading-cube-container">
+  <div class="loading-cube"></div>
+  <div class="loading-cube"></div>
+  <div class="loading-cube"></div>
+</div>

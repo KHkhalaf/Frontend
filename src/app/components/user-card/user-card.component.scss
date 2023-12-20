@@ -1,0 +1,27 @@
+.user-info {
+  margin-top: 10px;
+}
+
+img {
+  max-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
+}
+
+.user-card {
+  width: 170px;
+  height: 250px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  background-color: #c6d2dd;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
+}

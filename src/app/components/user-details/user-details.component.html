@@ -1,0 +1,13 @@
+<div class="header">
+  <h1>User Details</h1>
+</div>
+
+<div class="user-info-container">
+  <div class="user-info">
+    <img [src]="user?.avatar" alt="User Avatar" />
+    <p>{{ id }}</p>
+    <p>{{ user?.first_name }} {{ user?.last_name }}</p>
+    <p>{{ user?.email }}</p>
+    <button mat-button (click)="goBack()">Back to User List</button>
+  </div>
+</div>
